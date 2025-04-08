@@ -1,0 +1,26 @@
+Script started on 2025-04-08 12:58:34+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="44"]
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ awk '$2 == "ERROR" { print $1, $4, $5, $6 }' /home/student/Desktop/423120/log.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ awk -F '\t' 'NR>1 { math+=$2; sci+=$3; eng+=$4; count++ }
+> END { print "Math Avg:", math/count; print "Science Avg:", sci/count; print "English Avg:", eng/count }' /home/student/Desktop/423120/marks.tsv
+Math Avg: 58.75
+Science Avg: 64.25
+English Avg: 68.25
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ awk '{ ips[$1]++ } END { for (ip in ips) print ip, ips[ip] }' /home/student/Desktop/423120/server.log
+192.168.1.2 1
+192.168.1.1 2
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ apple banana cherry
+
+Command 'apple' not found, did you mean:
+
+  command 'ample' from deb ample (0.5.7-8)
+
+Try: sudo apt install <deb name>
+
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ sed -E 's/^([^ ]+) (.*) ([^ ]+)$/\3 \2 \1/' /home/student/Desktop/423120/lines.txt
+sed: can't read /home/student/Desktop/423120/lines.txt: No such file or directory
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ sed -E 's/\b([a-zA-Z]+) \1\b/\1/g' /home/student/Desktop/423120/duplicates.txt
+hello worldthis is a test
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_5[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_5[00m$ exit
+exit
+
+Script done on 2025-04-08 13:03:53+05:30 [COMMAND_EXIT_CODE="0"]
