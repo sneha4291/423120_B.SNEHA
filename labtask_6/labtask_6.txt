@@ -1,0 +1,47 @@
+Script started on 2025-04-08 13:04:55+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="44"]
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ mkdir backup_demo
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ cd backup_demo
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ echo "This is file 1" > file1.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ echo "This is file 2" > file2.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ echo "Another file" > file3.log
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ cd ..
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ tar -cvf backup.tar backup_demo/
+backup_demo/
+backup_demo/file3.log
+backup_demo/file2.txt
+backup_demo/file1.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ tar -tvf backup.tar
+drwxrwxr-x student/student   0 2025-04-08 13:05 backup_demo/
+-rw-rw-r-- student/student  13 2025-04-08 13:05 backup_demo/file3.log
+-rw-rw-r-- student/student  15 2025-04-08 13:05 backup_demo/file2.txt
+-rw-rw-r-- student/student  15 2025-04-08 13:05 backup_demo/file1.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ mkdir extracted_tar
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ tar -xvf backup.tar -C extracted_tar/
+backup_demo/
+backup_demo/file3.log
+backup_demo/file2.txt
+backup_demo/file1.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ cd backup_demo
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ find . -type f > file_list.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ cat file_list.txt | cpio -ov > ../backup.cpio
+./file_list.txt
+./file3.log
+./file2.txt
+./file1.txt
+1 block
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/backup_demo[00m$ cd ..
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ cpio -it < backup.cpio
+file_list.txt
+file3.log
+file2.txt
+file1.txt
+1 block
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ mkdir extracted_cpio
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ cd extracted_cpio
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/extracted_cpio[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/extracted_cpio[00m$ cpio -id < ../backup.cpio
+1 block
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6/extracted_cpio[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6/extracted_cpio[00m$ cd ..
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA/labtask_4/labtask_6[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA/labtask_4/labtask_6[00m$ exit
+exit
+
+Script done on 2025-04-08 13:06:27+05:30 [COMMAND_EXIT_CODE="0"]
