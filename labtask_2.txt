@@ -1,0 +1,15 @@
+Script started on 2025-04-08 12:27:23+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="46"]
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ ls a*
+ls: cannot access 'a*': No such file or directory
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ ls *.txt
+labtask_1.txt  labtask_2.txt
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ ls ?????     # Matches files with 5-character names, no extension
+[0m[01;34msubdir[0m
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ ls [b-e]*
+ls: cannot access '[b-e]*': No such file or directory
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ ls ?[0-9].log
+ls: cannot access '?[0-9].log': No such file or directory
+]0;student@ai-HP-ProDesk-600-G4-MT: ~/423120_B.SNEHA[01;32mstudent@ai-HP-ProDesk-600-G4-MT[00m:[01;34m~/423120_B.SNEHA[00m$ exit
+exit
+
+Script done on 2025-04-08 12:28:17+05:30 [COMMAND_EXIT_CODE="2"]
